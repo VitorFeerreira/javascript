@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font: normal 25pt Arial;
+        background-color: rgb(99, 99, 175);
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      var nome = window.prompt("Qual é o seu nome?");
+      document.write(
+        `Ola <strong>${nome}</strong>! Seu nome tem ${nome.length} letras.`,
+      );
+      document.write("<br/>O seu nome em maiusculas é " + nome.toUpperCase());
+      document.write("<br/>O seu nome em minusculas é " + nome.toLowerCase());
+
+      /*Exemplo de conversão de numero para valor de moeda*/
+      var salario = window.prompt("Qual é o seu salário?");
+      var salarioFormatado = parseFloat(salario).toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BRL",
+      });
+      document.write("<br/>Seu salário é " + salarioFormatado);
+    </script>
+  </body>
+</html>
